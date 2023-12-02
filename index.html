@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questions</title>
+    <style>
+        .moveButton {
+            position: relative;
+            transition: left 0.5s, top 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Questions</h1>
+    <p>Hai Nitnit, lufyu. kamu sayang aku juga ga??</p>
+    <button onclick="jawaban('ya')">Sayang</button>
+    <button onclick="moveButton()" class="moveButton" id="tidakButton">Tidak</button>
+    <br>
+    <script>
+        function jawaban(response) {
+            if(response === 'ya') {
+                alert('Lufyuuuu tooooooooo mwahhhh');
+            } else {
+                moveButton();
+            }
+        }
+
+        function moveButton() {
+            var button = document.getElementById('tidakButton');
+            var xPos = Math.random() * window.innerWidth;
+            var yPos = Math.random() * window.innerHeight;
+            button.style.left = xPos + 'px';
+            button.style.top = yPos + 'px';
+        }
+    </script>
+</body>
+</html>
